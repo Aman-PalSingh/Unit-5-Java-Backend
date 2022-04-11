@@ -1,0 +1,141 @@
+Problem 2: 
+What is the 3NF? Explain with an example. You don’t need to draw the
+tables or write the queries. Just mention the schema before and after the
+third normal form.
+
+Answer:-
+
+3 NF Stands for third normal form.
+ for a form to be in 3NF:-
+1. It hsould be in 2NF
+2. there Should be transitive dependency on super key
+
+transitive dependancy :-
+if x depends on y and y depends on z
+therefor x will depend on z 
+this is know as transitive dependency
+  to convert table to 3 nf we need to divide the table 
+Example
+
+Table Employee
+
+emp_id    emp_name     emp_add        emp_dept
+1         Aman         Raipur           D1
+2         Akash        Bilaspur         D2
+3         Ashwin       Akaltara         D1
+4         Apoorva      Raipur           D2
+
+
+1st part
+
+
+emp_id    emp_name     emp_add        
+1         Aman         Raipur          
+2         Akash        Bilaspur        
+3         Ashwin       Akaltara         
+4         Apoorva      Raipur 
+
+
+2nd Part
+
+
+emp_id             emp_dept
+1                  D1
+2                  D2
+3                  D1
+4                  D2
+
+
+Problem 3: 
+Briefly explain what a transaction is along with the ACID properties.
+
+Answer:-
+
+Clubbing multiple statement in SQL is known as transaction.
+A database transaction my=ust follow ACID properties.
+Where A Stands for Atomic
+Where C Stands for Consistent.
+Where I Stands for Isolated.
+Where D Stands for Durable.
+
+1. Atomic- all commands in the transaction should be completely executed or none of them thould be executed there should be no in between consiton.
+
+2. Consistent - All data should be in consitent state like in fund transfer consistency ensures that sum of funds inboth account remains same even after 
+   transfer of funds from one account to another.
+
+3. Isolted- Modification of data performed by tansaction should be independent.
+
+4. Durable-effect of modification performed should be permanent therefore it should be retrievable after long periods of time.
+
+
+
+Problem 4: 
+Table: Person
++-------------+---------+
+| Column Name | Type |
++-------------+---------+
+| personId | int |
+| lastName | varchar |
+| firstName | varchar |
++-------------+---------+
+personId is the primary key column for this table.
+This table contains information about the ID of some persons and their
+first and last names.
+Table: Address
++-------------+---------+
+| Column Name | Type |
++-------------+---------+
+| addressId | int |
+| personId | int |
+| city | varchar |
+| state | varchar |
++-------------+---------+
+addressId is the primary key column for this table.
+Each row of this table contains information about the city and state of one
+person with ID = PersonId.
+Write an SQL query to report the first name, last name, city, and state of
+each person in the Person table. If the address of a personId is not
+present in the Address table, report null instead.
+Return the result table in any order.
+The query result format is in the following example.
+Example 1:
+Input:
+Person table:
++----------+----------+-----------+
+| personId | lastName | firstName |
++----------+----------+-----------+
+| 1 | Wang | Allen |
+| 2 | Alice | Bob |
++----------+----------+-----------+
+Address table:
++-----------+----------+---------------+------------+
+| addressId | personId | city | state |
++-----------+----------+---------------+------------+
+| 1 | 2 | New York City | New York |
+| 2 | 3 | Leetcode | California |
++-----------+----------+---------------+------------+
+Output:
++-----------+----------+---------------+----------+
+| firstName | lastName | city | state |
++-----------+----------+---------------+----------+
+| Allen | Wang | Null | Null |
+| Bob | Alice | New York City | New York |
++-----------+----------+---------------+----------+
+Explanation:
+There is no address in the address table for the personId = 1 so we return
+null in their city and state.
+addressId = 1 contains information about the address of personId = 2.
+
+Answer
+
+create database unit5_c1;
+use unit5_c1;
+create table Person(personId int Primary Key,lastName varchar(13),fristName varchar(13));
+decribe person;
+create table Address(addressId int Primary Key,personId int,city varchar(13),state varchar(13));
+describe person;
+insert into person values(1,"Wang","Allen"),(2,"Alice","Bob");
+select * from person;
+insert into address values(1,2,"New York City","New York"),(2,3,"Leetcode","California");
+select * from address;
+select p.personId,p.firstName,p.lastName,a.city,a.state from person p left join  address a on p.personId = a.personId;
