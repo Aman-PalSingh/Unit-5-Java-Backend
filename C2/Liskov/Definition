@@ -1,0 +1,7 @@
+Liskov Substitution Principle (LSP)
+
+It is one of the solid principles
+A child class Object can replace the object of parent class without breaking the program.
+If the above condition is satisfied then then it can be called as LSV.
+Loose Coupling may is achieved by LSV therefore our program becomes adaptive and flexible.
+
