@@ -1,14 +1,14 @@
 package com.Unit5.C2.BinarySearch;
 
 public class BinarySearch {
-    Sort sortArray;
-
-    public BinarySearch(Sort sort) {
-        this.sortArray = sort;
+    Sort SortingAlgoSelectionClass;
+    //constructor
+    public BinarySearch(Sort SortingAlgo) {
+        this.SortingAlgoSelectionClass = SortingAlgo;
     }
 
-    public void SearchSelect(int[] arr, int target){
-        sortArray.sortFun(arr);
+    public void binarySearch(int[] arr, int target){
+        SortingAlgoSelectionClass.sortFun(arr);
 
     }
 }
