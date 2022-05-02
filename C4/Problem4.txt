@@ -1,0 +1,70 @@
+a) What do you know about client server architecture?
+Answer a)
+
+
+b) What is caching, explain its use cases.
+c) what are web sockets where it is used.
+d) How are public and private keys used in encryption and decryption?
+
+Question4
+
+
+part b)
+What is caching, explain its use cases?
+
+it is the memory which is very nearest to the CPU, all recent information are stored into cache memory
+The data in a cache is  stored  RAM (Random-access memory) and may also be used in correlation with a software component.
+Caches are used everywhere in our modern devices. It's found in many hardware components and throughout software.
+ The goal of caching is to store data from slow memory into fast memory so it can be retrieved quicker
+Use Cases:-
+1.Database Caching.
+2.CDN(Content Delivery Network)
+3.Web Caching.
+4.RDBMS Speedup
+5.Integrated Cache.
+6.General Cache.
+7.Token Caching
+
+
+
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=================================================================
+ part c)
+ what are web sockets where it is used.
+ ANswer===
+ The WebSocket protocol enables interaction between a web browser (or other client application) and a web server
+ Its allow both the server and the client to push messages at any time. Almost every borser supports Websockets
+ also solve HTTP issues:-
+                        )Full-duplex communication ----->  client and server can talk to each other independently(same time)
+                        Bi-directional protocol:----> client/server can send a message to the other party
+
+                       *) when connections are terminated  its can't recover automatically.we have to implement ourself
+
+
+uses:
+
+ Multiplayer games
+ Multimedia Chats
+ editing/coding
+ Social feed
+ Financial tickers
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   =================================================================
+   part d)
+    How are public and private keys used in encryption and decryption?
+Answer:
+public and private keys  both are commonly used for encryption and decryption.
+
+It is an encryption technique that uses a pair of keys for
+secure data communication.
+ In the pair of keys,
+  public key -----> encrypting (the plain text to convert it into ciphertext),public key is provided to the public
+  private key ----->used for decrypting (the ciphertext to read the message.), it given to the receiver
+
+All asymmetric key pairs are unique, so a message only be read by the person who has the corresponding private key

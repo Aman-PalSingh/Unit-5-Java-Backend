@@ -1,0 +1,14 @@
+CAP Theorem.
+As we now SQl Database follows ACID Properties but NoSQL Database align on BASE Properties.
+BASE Stands for Basically Available, Soft State and Eventually Consistent.
+distributed system - A distributed system is a system that allows resource sharing among various of its connected devices through a network.
+CAP theorem states that in distributed system Consistency , Availability and partition tolerance all can't be achieved at once.
+only any of the two above properties can be guaranteed.
+Consistency - means the data is updated on all the servers and reading data will give consistent information.
+Availability - All servers are available to distribute data at a time
+Partition Tolerance - if any of the server is dead then also the whole system won't go down as the request to fetch data will not be sent to dead server by the load balancer
+
+if a system is consistent then at the same time it cant be readily availabe.
+If the system is Available it can't be consistent .
+as Partition Tolerance is necessary because if it is not present then failing of one server would just collapse the system.
+

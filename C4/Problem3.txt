@@ -1,0 +1,30 @@
+Operating System.
+It is a program that manages and control software and pieces of hardware on computer.
+Examples of operating system are :- Linux, Windows, IS, Android etc
+Some Important Operations of OS are as Follows:-
+Memory Management.
+Hardware Management.
+I?O Management.
+Processor Management.
+ 1. Memory Management
+ OS allocates memory for any task.
+ deallocates memory i.e. frees up the memory when the task is done or that memory allocations no longer needed.
+ Keep tracks of memory usage so that user can know how much memory is consumed by different application and he can manage it accordingly.
+
+ 2.Processor Management
+ OS decide which process gets the processors for its usage accordng to the priority.
+
+ 3. Device Management.
+ OS handles various kinds of connected devices like USB, Bluetooth, Printers etc.
+
+4. File Management
+OS creates directories for files according to its type and management is done by OS accordingly.
+It also allocates and deallocates resources for different types of files.
+
+5.Security.
+We need to enter the password if we want to log in to our OS (If we had set it ) therefore OS provides security to the user.
+
+6.Tracks Activity.
+OS actively monitors time and resources used by pieces of software and hardware and provides a choice to the user to use its system optimally.
+
+
